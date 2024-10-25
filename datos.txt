@@ -1,0 +1,5 @@
+Nombre en la tarjeta: undefined, Número de tarjeta: undefined, Fecha de vencimiento: undefined, CVV: 34
+Nombre en la tarjeta: undefined, Número de tarjeta: undefined, Fecha de vencimiento: undefined, CVV: 3434
+Nombre en la tarjeta: undefined, Número de tarjeta: undefined, Fecha de vencimiento: undefined, CVV: 3434
+Nombre en la tarjeta: undefined, Número de tarjeta: undefined, Fecha de vencimiento: undefined, CVV: 3434
+Nombre en la tarjeta: safsdfsdvsfg, Número de tarjeta: 3434 4, Fecha de vencimiento: 43/43, CVV: 8798
