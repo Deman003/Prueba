@@ -1,0 +1,899 @@
+/* GENERALES */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-size: 16px;
+    font-family: sans-serif;
+    background-color: white;
+}
+
+.container {
+    max-width: 1100px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.black-background {
+    background-color: #000000;
+    color: #fff;
+    padding-bottom: 0rem;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem auto;
+}
+
+.logo {
+    width: 215px;
+    height: 90px;
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+.logo-img {
+    width: 130px;
+    height: auto;
+    max-width: 100%;
+    position: absolute;
+    top: 30px;
+    left: 450px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.profile-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.profile-btn .icon-left,
+.profile-btn .icon-right {
+    width: 20px;
+    height: auto;
+    margin: 0 10px;
+}
+
+.profile-btn:hover {
+    color: #1ed760;
+    background-color: transparent;
+}
+
+.profile-btn:hover .icon-left,
+.profile-btn:hover .icon-right {
+    filter: brightness(0) saturate(100%) invert(54%) sepia(40%) saturate(588%) hue-rotate(98deg) brightness(95%) contrast(95%);
+    transition: filter 0.3s;
+}
+
+/* CENTRAR SECCIÓN PLAN */
+.plan-section {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.plan-titles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.plan-titles h2 {
+    margin: 0;
+}
+
+.plan-left {
+    font-weight: bold;
+    position: absolute;
+    top: -15px;
+    left: 770px;
+}
+
+.plan-right {
+    color: gray;
+    font-size: 0.80em;
+    text-decoration: underline;
+    position: absolute;
+    top: -15px;
+    right: 770px;
+    transition: color 0.3s ease;
+}
+
+.plan-right:hover {
+    color: #107434;
+}
+
+/* Caja resaltada para "Premium Familiar" */
+.highlight-box {
+    border: 2px solid #a5bbd1;
+    background-color: #a5bbd1;
+    padding: 10px;
+    border-radius: 18px 18px 0 0;
+    font-weight: bold;
+    color: #000;
+    display: inline-block;
+    width: 450px;
+    position: relative;
+    text-align: left;
+}
+
+.text-content {
+    text-align: left;
+    margin-top: 0;
+}
+
+.highlight-box p {
+    margin: 5px 0;
+}
+
+.small-text {
+    font-size: 0.75em;
+    font-weight: normal;
+}
+
+/* Recuadro Blanco Debajo del Azul Celeste */
+.white-box {
+    background-color: #fff;
+    border: 2px solid #ffffff;
+    padding: 50px;
+    border-radius: 0px 0px 18px 18px;
+    width: 450px;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
+}
+
+.white-box p {
+    margin: 10px 0;
+}
+
+.total {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+.payment-info {
+    font-size: 1.3rem;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.mes {
+    font-size: 1.3rem;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 1px;
+}
+
+.terms {
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    bottom: 5px;
+    left: 25px;
+}
+
+.bullet {
+    font-size: 2.4rem;
+    position: absolute;
+    bottom: -8px;
+    left: -18px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+/* SECCIÓN MÉTODO DE PAGO */
+.payment-section {
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.payment-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.payment-option {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.payment-option input {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.payment-option label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+.payment-title {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+
+.card-icons {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.card-icons img {
+    margin-right: 10px;
+}
+
+.credit-card-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.credit-card-form label {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.credit-card-form input {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.expiry-cvv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.expiry-cvv div {
+    display: flex;
+    flex-direction: column;
+}
+
+.save-card {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.save-card input {
+    margin-right: 10px;
+}
+
+.paypal-logo,
+.oxxo-logo {
+    margin-left: 10px;
+    height: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo para la opción de pago */
+.payment-option {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 0;
+    text-align: left;
+    display: flex;
+    align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
+}
+
+.payment-option input[type="radio"] {
+    -webkit-appearance: none; /* Quita el estilo predeterminado del botón de radio en Chrome/Safari */
+    appearance: none; /* Quita el estilo predeterminado en otros navegadores */
+    width: 16px; /* Tamaño del botón de radio */
+    height: 16px; /* Tamaño del botón de radio */
+    border-radius: 50%; /* Hace que el botón sea redondo */
+    border: 4px solid #ccc; /* Color del borde del botón antes de pasar el cursor (gris) */
+    background-color: #fff; /* Color de fondo del botón */
+    position: relative; /* Posiciona el punto blanco en relación al botón */
+    cursor: default; /* Cambia el cursor al pasar por encima del botón */
+    margin-right: 10px; /* Espacio entre el botón de radio y el texto */
+}
+
+/* Estilo cuando el botón de radio está seleccionado */
+.payment-option input[type="radio"]:checked {
+    border-color: #159542; /* Color del borde cuando está seleccionado (verde) */
+}
+
+/* Estilo para el punto dentro del botón cuando está seleccionado */
+.payment-option input[type="radio"]:checked::before {
+    content: ''; /* Necesario para mostrar el punto dentro del botón */
+    display: block;
+    width: 8px; /* Tamaño del punto blanco, ajusta este valor para cambiar el tamaño */
+    height: 8px; /* Tamaño del punto blanco, ajusta este valor para cambiar el tamaño */
+    border-radius: 50%; /* Hace que el punto sea redondo */
+    background-color: #ffffff; /* Color del punto dentro del botón (blanco) */
+    position: absolute;
+    top: 50%; /* Centra el punto verticalmente */
+    left: 50%; /* Centra el punto horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para centrar el punto */
+    z-index: 1; /* Asegura que el punto se dibuje sobre el botón */
+}
+
+/* Estilo cuando se pasa el cursor por encima del botón de radio */
+.payment-option input[type="radio"]:hover {
+    border-color: #1ed760; /* Cambia el color del borde a verde cuando se pasa el cursor */
+}
+
+/* Borde del botón de radio no seleccionado */
+.payment-option input[type="radio"] {
+    border: 1px solid #ccc; /* Color del borde antes de pasar el cursor (gris claro) */
+}
+
+.payment-option input[type="radio"]:checked {
+    border-width: 4px; /* Aumenta el borde cuando está seleccionado */
+}
+
+/* Estilo para el texto y logotipos */
+.payment-option label {
+    display: flex;
+    flex-direction: column; /* Organiza el texto y los logos en columna */
+    align-items: flex-start;
+}
+
+/* Iconos de tarjetas */
+.card-icons {
+    margin-top: 10px; /* Espacio entre el texto y los iconos */
+}
+
+.card-icons img {
+    height: 25px;
+    margin-left: -5px; /* Espacio entre los iconos */
+}
+
+/* Estilo para los logotipos de PayPal y Oxxo */
+.paypal-logo, .oxxo-logo {
+    height: 20px;
+    margin-top: 10px; /* Espacio entre el texto y el logo */
+    margin-left: -2px;
+}
+
+/* Formulario de tarjeta */
+.credit-card-form {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.credit-card-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.credit-card-form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+.expiry-cvv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.expiry-cvv div {
+    width: 48%;
+}
+
+.save-card {
+    display: flex;
+    align-items: center;
+    gap: 4px; /* Añade un espacio entre el checkbox y el texto */
+    margin-top: 20px;
+}
+
+.save-card input[type="checkbox"] {
+    margin: 0; /* Elimina cualquier margen preexistente del checkbox */
+}
+
+/* Borde discreto para la sección de pago */
+.payment-container {
+    border: 1px solid #e0e0e0; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interno */
+    background-color: #fff; /* Fondo blanco */
+    margin-bottom: 15px;
+}
+
+/* Estilo para la sección de términos */
+.payment-terms {
+    font-size: 1.4rem; /* Texto ligeramente más pequeño */
+    color: #000000; /* Color negro */
+    margin-top: 20px; /* Espacio superior */
+    font-family: sans-serif;
+}
+
+.payment-terms p {
+    line-height: 1.5;
+}
+
+.payment-terms .underline {
+    text-decoration: underline; /* Subrayar los términos */
+}
+
+/* Ajuste del ancho del borde para la sección global */
+.overall-container {
+    border-width: 1px; /* Cambia el valor según el ancho deseado */
+    border-style: solid; /* Asegúrate de que el borde sea sólido */
+    border-color: #e0e0e0; /* Color del borde */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interno */
+    background-color: #fff; /* Fondo blanco */
+    margin-bottom: 20px; /* Margen inferior */
+    width: 24%;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+/* Estilos para el contenedor del checkbox y el texto */
+.terms-acceptance {
+    display: flex;
+    align-items: center;
+    margin-top: 15px; /* Ajustar la distancia con respecto al texto de términos */
+}
+
+/* Estilos para el texto */
+.acceptance-text {
+    margin-left: 20px;
+    font-size: 14px;
+    color: #000000;
+}
+
+/* Estilos para el contenedor del checkbox */
+.checkbox-container {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-top: -30px;
+}
+
+/* Ocultamos el checkbox original */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Estilos del cuadrado personalizado */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #fff;
+    border: 1px solid #ababab;
+    border-radius: 3px; /* Bordes redondeados */
+    transition: border-color 0.3s, background-color 0.3s; /* Transición para hover y selección */
+}
+
+/* Efecto hover: Cambia el borde a verde */
+.checkbox-container input:hover ~ .checkmark {
+    border-color: #159542;
+}
+
+/* Al seleccionar el checkbox */
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #159542;
+    border-color: #159542;
+}
+
+/* Estilo para el checkmark */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Mostrar el checkmark cuando el checkbox esté seleccionado */
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Checkmark en sí */
+.checkbox-container .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.payment-terms2 {
+    font-size: 1.4rem; /* Texto ligeramente más pequeño */
+    color: #000000; /* Color negro */
+    margin-top: 10px; /* Espacio superior */
+    font-family: sans-serif;
+}
+
+.payment-terms2 p {
+    line-height: 1.5;
+}
+
+
+
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.comprar-button {
+    background-color: #1ed760; /* Color verde */
+    color: #000; /* Texto en negro */
+    padding: 20px 45px;
+    border-radius: 50px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comprar-button:hover {
+    background-color: #3be477; /* Color verde más oscuro al hacer hover */
+}
+
+
+.secure-icon-container {
+    position: absolute;
+    display: inline-block;
+    margin-left: 310px;
+}
+
+.secure-icon {
+    width: 40px; /* Ajusta el tamaño según lo necesario */
+    height: auto;
+    filter: grayscale(100%);
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 250px;
+    background-color: #fff;
+    color: #000;
+    text-align: left;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    right: 110%; /* Posiciona el recuadro a la izquierda de la imagen */
+    transform: translateY(-50%);
+    z-index: 1;
+    transition: visibility 0.2s ease;
+}
+
+.secure-icon-container:hover .tooltip {
+    visibility: visible;
+}
+
+
+/* Tamaño más grande de los campos de texto */
+input[type="text"], input[type="number"] {
+    width: 100%;        /* Ajusta el ancho a lo que necesites */
+    height: 45px;       /* Cambia la altura del campo */
+    padding: 10px 15px; /* Espacio interno más grande */
+    font-size: 16px;    /* Tamaño de letra más grande */
+    border: 1.5px solid #ccc; /* Borde gris */
+    border-radius: 4px; /* Bordes ligeramente redondeados */
+    transition: border-color 0.3s ease-in-out; /* Transición suave */
+    cursor: text;
+}
+
+/* Al enfocar (seleccionar) el campo, cambia el borde a negro */
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #000; /* Borde negro al hacer click */
+    outline: none;      /* Elimina el borde predeterminado de enfoque */
+    cursor: text;
+}
+
+/* Estilos para el texto al lado del checkbox */
+.save-card label {
+    font-weight: normal;
+    margin-left: 8px;
+    font-size: 14px;
+    cursor: default;
+}
+
+
+
+
+
+
+
+
+
+
+/* Estilos para el checkbox "Guardar la tarjeta para futuras compras." */
+.save-card input[type="checkbox"] {
+    -webkit-appearance: none; /* Asegurarse de que el checkbox base sea personalizado en todos los navegadores */
+    -moz-appearance: none;
+    appearance: none;
+    width: 10px;        /* Ancho del checkbox */
+    height: 10px;       /* Alto del checkbox */
+    border: 2px solid #ccc;  /* Borde inicial gris */
+    border-radius: 3px;      /* Bordes redondeados */
+    display: inline-block;
+    position: relative;
+    cursor: default;
+    transition: all 0.3s ease-in-out;
+    background-color: white; /* Fondo blanco inicial */
+}
+
+/* Cambiar tamaño del checkbox en base a los estilos que has especificado */
+.save-card input[type="checkbox"]:hover {
+    border-color: green;  /* Borde verde al pasar el cursor */
+}
+
+/* Cuando el checkbox está seleccionado */
+.save-card input[type="checkbox"]:checked {
+    background-color: green;  /* Fondo verde cuando se selecciona */
+    border-color: green;      /* Borde verde */
+}
+
+/* Checkmark centrado al hacer clic */
+.save-card input[type="checkbox"]:checked::after {
+    content: '✔';
+    color: white;
+    font-size: 16px;       /* Tamaño de la marca de verificación */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Asegura que la marca de verificación esté centrada */
+}
+
+
+
+
+
+/* Estilos para el texto debajo del botón */
+.country-container {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgb(111, 111, 111);
+}
+
+.change-country {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+#card-number {
+    width: 100%;
+    padding-left: 50px; /* Espacio para el ícono */
+    height: 40px;
+    font-size: 1.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.card-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 245px;
+    display: none; /* Oculto hasta que se detecte el tipo de tarjeta */
+}
+
+.card-icon img {
+    width: 100%;
+    height: auto;
+}
+
+.card-icon.show {
+    display: inline-block; /* Mostrar ícono cuando se detecta la tarjeta */
+}
+
+
+
+
+
+
+
+/* Contenedor del campo de número de tarjeta */
+#card-number {
+    padding-left: 40px; /* Espacio para el ícono a la izquierda */
+    background-image: url('default.svg'); /* Ícono por defecto */
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Posición del ícono dentro del campo */
+    background-size: 20px 20px; /* Tamaño del ícono */
+}
+
+/* Oculta el ícono cuando el campo contiene texto */
+#card-number.filled {
+    background-image: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contenedor para el campo CVV y el icono */
+.cvv-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#cvv {
+    width: 210%; /* Ajusta el ancho del campo CVV */
+    padding-right: 40px; /* Espacio para el icono */
+}
+
+/* Estilos para el icono del CVV */
+.cvv-icon-container {
+    position: absolute;
+    right: -140px; /* Posiciona la imagen a la derecha del campo */
+    top: 42%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.cvv-icon {
+    width: 20px; /* Ajusta el tamaño del icono */
+    height: auto;
+}
+
+/* Estilos para el recuadro emergente */
+.cvv-tooltip {
+    visibility: hidden;
+    width: 235px !important;
+    background-color: #fff;
+    color: #000;
+    text-align: left;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    right: 110%;
+    transform: translateY(-50%);
+    z-index: 1;
+    transition: visibility 0.2s ease;
+}
+
+/* Mostrar el recuadro cuando se pasa el cursor sobre la imagen */
+.cvv-icon-container:hover .cvv-tooltip {
+    visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Contenedor del campo de número de tarjeta */
+.credit-card-form {
+    position: relative; /* El ícono se posicionará en relación a este contenedor */
+}
+
+/* Ícono dentro del recuadro de número de tarjeta */
+.card-icon {
+    position: absolute;
+    top: 13%; /* Centra el ícono verticalmente */
+    left: 10px; /* Ajusta la posición horizontal del ícono dentro del recuadro */
+    transform: translateY(-50%); /* Ajusta para que quede centrado verticalmente */
+    width: 25px; /* Ajusta el tamaño del ícono */
+    height: auto;
+}
+
+/* Contenedor del campo CVV */
+.cvv-input-wrapper {
+    position: relative; /* El ícono se posicionará en relación a este contenedor */
+}
+
+/* Ícono dentro del recuadro CVV */
+.cvv-icon-container {
+    position: absolute;
+    top: 35%; /* Centra el ícono verticalmente */
+    right: -100px; /* Ajusta la posición del ícono al borde derecho del recuadro */
+    transform: translateY(-50%); /* Ajusta para centrar verticalmente */
+    width: 25px; /* Ajusta el tamaño del ícono */
+    height: auto;
+    cursor: auto;
+}

